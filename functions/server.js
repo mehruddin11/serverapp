@@ -15,7 +15,9 @@ const database = {
 	date:new Date,
 	img:'https://th.bing.com/th/id/OIP.X_65uIJkSF8bJl_zyU4twgHaEo?w=269&h=180&c=7&r=0&o=5&pid=1.7'
 
-	},
+	}],
+
+	producst:[
 	{
 
 	id:19001,
@@ -23,15 +25,17 @@ const database = {
 	date:new Date,
 	img:'https://th.bing.com/th/id/OIP.OcdKodm_a3FiAYKlUAjFdgHaE8?w=252&h=180&c=7&r=0&o=5&pid=1.7'
 
-	},
-	{
+	}],
+	name:[{
 
 	id:19002,
 	name:'clean-road',
 	date:new Date,
 	img:'https://th.bing.com/th/id/OIP.OcdKodm_a3FiAYKlUAjFdgHaE8?w=252&h=180&c=7&r=0&o=5&pid=1.7'
 
-	},
+	}
+	],
+	age:[
 	{
 
 	id:19003,
@@ -39,11 +43,10 @@ const database = {
 	date:new Date,
 	img:'https://th.bing.com/th/id/OIP._h7s27M_cYLoJ7SzE7XRZQHaEK?w=300&h=180&c=7&r=0&o=5&pid=1.7'
 
-	}
-]
+	}]
 }
 router.get('/', (req, res)=>{
-	res.json(database.users)
+	res.json(database)
 });
 app.use('/',router);
 module.exports.handler =serverless_http(app);
